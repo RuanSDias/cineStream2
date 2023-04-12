@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.hibernate.annotations.CreationTimestamp"/>
+    <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="br.com.fiap.entity.Genero"/>
+    <fullyQualifiedTypeName name="br.com.fiap.entity.Cliente"/>
+    <fullyQualifiedTypeName name="org.hibernate.internal.build.AllowSysOut"/>
+    <fullyQualifiedTypeName name="org.hibernate.jdbc.Expectations"/>
+    <fullyQualifiedTypeName name="br.com.fiap.exceptions.CommitException"/>
+    <fullyQualifiedTypeName name="br.com.fiap.exceptions.IdNaoEncontradoException"/>
+    <fullyQualifiedTypeName name="br.com.fiap.dao.ClienteDaoImpl"/>
+    <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+    <fullyQualifiedTypeName name="br.com.fiap.jpa.singleton.EntityManagerFactorySingleton"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="br.com.fiap.jpa.Dao.GenericDao"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="oracle.sql.ARRAY"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.SequenceGenerator"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Column"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="br.com.fiap.jpa.exception.IdNaoEncontradoException"/>
+    <fullyQualifiedTypeName name="br.com.fiap.jpa.exception.CommitException"/>
+    <fullyQualifiedTypeName name="br.com.fiap.jpa.Dao.GenericDaoImpl"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.ParameterizedType"/>
+    <fullyQualifiedTypeName name="br.com.fiap.jpa.Dao.Teste"/>
+</qualifiedTypeNameHistroy>

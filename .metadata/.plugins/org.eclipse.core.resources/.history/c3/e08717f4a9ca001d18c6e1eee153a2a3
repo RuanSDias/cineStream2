@@ -1,0 +1,10 @@
+package br.com.fiap.jpa.Entity;
+
+import javax.persistence.Table;
+
+public class Cliente {
+	
+	@Entity
+	@Table(name="TDSS_TB_CLIENTE")
+
+}

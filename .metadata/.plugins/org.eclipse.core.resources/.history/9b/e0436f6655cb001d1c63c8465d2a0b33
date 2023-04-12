@@ -1,0 +1,9 @@
+package br.com.fiap.jpa.Dao;
+
+public interface Teste {
+	
+	public recadastrar() {
+		
+	}
+
+}

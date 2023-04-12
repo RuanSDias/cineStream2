@@ -1,0 +1,24 @@
+INDEX VERSION 1.131+C:\Users\Ruan\Desktop\Java\cineStream\.metadata\.plugins\org.eclipse.jdt.core
+2280270265.index
+1865797976.index
+2134474690.index
+185706648.index
+1931074819.index
+2622892121.index
+1823143803.index
+1595958605.index
+1594549496.index
+1536518039.index
+3741423346.index
+1676687442.index
+2847893098.index
+4044342164.index
+529536919.index
+4099096517.index
+3610345689.index
+3503313330.index
+868884415.index
+3553896868.index
+2082251964.index
+2480063992.index
+3557111390.index

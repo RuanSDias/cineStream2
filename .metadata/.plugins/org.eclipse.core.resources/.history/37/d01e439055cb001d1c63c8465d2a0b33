@@ -1,0 +1,5 @@
+package br.com.fiap.jpa.Dao;
+
+public class teste2 implements Teste {
+
+}

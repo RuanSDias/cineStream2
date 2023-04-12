@@ -1,0 +1,15 @@
+package br.com.fiap.jpa.Dao;
+
+import br.com.fiap.jpa.exception.CommitException;
+import br.com.fiap.jpa.exception.IdNaoEncontradoException;
+
+public interface GenericDao<T> {
+	
+	void cadastrar(T entidade);
+	void atualizar(T entidade) throws IdNaoEncontradoException;
+	void remover(int id) throws IdNaoEncontradoException;
+	void buscar(T entidade)throws IdNaoEncontradoException;
+	T buscar (int id ) throws IdNaoEncontradoException;
+	void commit() throws CommitException;
+
+}

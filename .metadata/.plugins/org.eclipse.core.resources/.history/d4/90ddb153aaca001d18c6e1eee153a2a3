@@ -1,0 +1,18 @@
+package br.com.fiap.jpa.Entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TDSS_TB_CLIENTE")
+@SequenceGenerator(name="cliente", sequenceName = "SQ_TDSS_TAB_CLIENTE", allocationSize = 1)
+public class Cliente {
+	
+	@Id
+	@Column(name="id_cliente")
+	@GeneratedValue(straegy = G)
+
+}

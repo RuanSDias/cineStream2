@@ -1,0 +1,10 @@
+package br.com.fiap.jpa.Dao;
+
+public class teste2 implements Teste {
+
+	public void recadastrar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
