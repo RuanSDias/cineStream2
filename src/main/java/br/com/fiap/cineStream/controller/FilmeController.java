@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -17,7 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.fiap.cineStream.exception.RestNotFoundException;
+import br.com.fiap.cineStream.model.Categoria;
 import br.com.fiap.cineStream.model.Filme;
+import br.com.fiap.cineStream.repository.CategoriaRepository;
 import br.com.fiap.cineStream.repository.FilmeRepository;
 import jakarta.validation.Valid;
 
@@ -30,15 +33,23 @@ public class FilmeController {
     @Autowired
     FilmeRepository repository;
 
+    @Autowired
+    CategoriaRepository categoriaRepository;
+
+    Categoria categoria;
+
     @GetMapping
     public List<Filme> index(){
         return repository.findAll();
     }
 
     @PostMapping
-    public ResponseEntity<Filme> create(@RequestBody Filme filme){
+    public ResponseEntity<Filme> create(@ModelAttribute Categoria categoria, @RequestBody Filme filme){
         log.info("Cadastrando filme " + filme);
         repository.save(filme);
+        Filme filmeParaAssociar = repository.findById(filme.getId()).get();
+        categoria = categoriaRepository.findById(categoria.getId()).get();
+        filmeParaAssociar.getCategoria().add(categoria);
         return ResponseEntity.status(HttpStatus.CREATED).body(filme);
     }
 

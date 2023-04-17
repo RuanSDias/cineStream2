@@ -1,6 +1,6 @@
 package br.com.fiap.cineStream.model;
 
-import java.time.LocalDate;
+import java.util.Calendar;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,9 +22,7 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private LocalDate dataDeNascimento;
+    private Calendar dataDeNascimento;
     private String cpf;
-    
-
-    
+    private String email;    
 }
