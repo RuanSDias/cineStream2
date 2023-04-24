@@ -13,5 +13,6 @@ public interface FilmeRepository extends JpaRepository<Filme, Long> {
 
     //Page<Filme> findByNomeContaining(String nome, Pageable pageable);
     //Page<Filme> findByCategoriasContaining(List<Categoria> catagorias, Pageable pageable);
+    Page<Filme> findByDescricaoContaining(String descricao, Pageable pageable);
     
 }

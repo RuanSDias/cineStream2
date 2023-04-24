@@ -3,6 +3,11 @@ package br.com.fiap.cineStream.model;
 import java.util.Calendar;
 import java.util.List;
 
+import org.springframework.data.domain.Pageable;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.http.ResponseEntity;
+
+import br.com.fiap.cineStream.controller.FilmeController;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -29,6 +34,16 @@ public class Filme {
     private Calendar dataDeLancamento;
     private String resumo;
     @ManyToMany(mappedBy = "filmes")
-    private List<Categoria> categoria;
+    private List<Categoria> categorias;
+
+    public EntityModel<Filme> toEntityModel(){
+        return EntityModel.of(
+            this,
+            linkTo(methodOn(FilmeController.class).show(id)).withSelfRel(),
+            linkTo(methodOn(FilmeController.class).destroy(id)).withRel("delete"),
+            linkTo(methodOn(FilmeController.class).index(null, Pageable.unpaged())).withRel("all"),
+            linkTo(methodOn(FilmeController.class).show(this.getCategorias().get(1))).withRel("conta")
+        );
+    }
     
 }
