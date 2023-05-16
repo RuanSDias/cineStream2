@@ -36,11 +36,20 @@ public class UsuarioController {
         return repository.findAll();
     }
 
-    @PostMapping
+    @PostMapping("/api/registrar")
     public ResponseEntity<Usuario> create(@RequestBody Usuario usuario){
         log.info("Cadastrando usuário " + usuario);
         repository.save(usuario);
         return ResponseEntity.status(HttpStatus.CREATED).body(usuario);
+    }
+
+    @PostMapping("/api/login")
+    
+    public ResponseEntity<Object> login(@RequestBody @Valid Credencial credencial){
+        manager.authenticate(credencial.toAuthentication());
+
+        var token = tokenService.generateToken(credencial);
+        return ResponseEntity.ok(token);
     }
 
     @GetMapping("{id}")
